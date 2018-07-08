@@ -32,14 +32,16 @@ def get_graph_from_entities(required_entities):
     for key, entity in required_entities.items():
         graph["nodes"].append({
             "id":key,
-            "group":get_group(entity['type'])
+            "group":get_group(entity['type']),
+            "name":entity['name']
         })
         for edge_to in entity['edges']:
-            graph["links"].append({
-            "source":key,
-            "target":edge_to,
-            "value":1
-        })
+            if edge_to in required_entities:
+                graph["links"].append({
+                "source":key,
+                "target":edge_to,
+                "value":1
+            })
     return graph
 
 def get_entities(paths):
@@ -69,14 +71,16 @@ def get_graph():
     entity_one = request.args.get('entity_one')
     entity_two = request.args.get('entity_two')
     cutoff = request.args.get('cutoff')
-    print(entity_one)
     if entity_one and entity_two and int(cutoff):
+        print("Selective data")
         path = get_path(entity_one, entity_two, int(cutoff))
     else:
+        print("All data")
         path = []
-    print(path)
     required_entities = get_entities(path)
     graph = get_graph_from_entities(required_entities)
+    with open('crunchbase.json', 'w') as outfile:
+        json.dump(graph, outfile)
     return jsonify(graph)
 
 if __name__ == "__main__":

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<body>
+
+<h2>Nexus submit</h2>
+
+<form>
+  Entity 1<br>
+  <input id="c1" type="text" name="firstname" value="USA">
+  <br>
+  Entity 2<br>
+  <input id="c2" type="text" name="lastname" value="CHN">
+  <br><br>
+  <input id="submit"type="button" value="Check">
+</form>
+
+<p>See Nexus Live in action</p>
+
+</body>
+</html>
+
+<script>
+function clearjQueryCache() {
+  for (var x in jQuery.cache) {
+    delete jQuery.cache[x];
+  }
+}
+
+var c1 = $('#c1').val();
+var c2 = $('#c2').val();
+var data = { entity_one: c1, entity_two: c2, cutoff: 6 };
+
+$('#submit').click(function() {
+  var c1 = $('#c1').val();
+  var c2 = $('#c2').val();
+  var data = { entity_one: c1, entity_two: c2, cutoff: 6 };
+  var jqxhr = $.get(
+    'http://localhost:5000/get_graph?' + $.param(data),
+    function(graph) {
+      console.log('done');
+      clearjQueryCache();
+      window.location.replace('http://localhost/index.html');
+    }
+  );
+
+  function dragstarted(d) {
+    if (!d3.event.active) simulation.alphaTarget(0.3).restart();
+    d.fx = d.x;
+    d.fy = d.y;
+  }
+
+  function dragged(d) {
+    d.fx = d3.event.x;
+    d.fy = d3.event.y;
+  }
+
+  function dragended(d) {
+    if (!d3.event.active) simulation.alphaTarget(0);
+    d.fx = null;
+    d.fy = null;
+  }
+});
+</script>

@@ -34,7 +34,7 @@ text {
       </div>
       <ul class="nav navbar-nav">
         <li class="active"><a href="#">Home</a></li>
-        <li><a href="#">Search</a></li>
+        <li><a href="http://localhost/search.html">Search</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
@@ -43,8 +43,8 @@ text {
     </div>
   </nav>
   <div class="container">
-  <h3>We graph knowledge</h3>
-  <p>Nexus is an intelligent graph for your private banking relations</p>
+  <h3>Nexus Knowledge</h3>
+  <p>Nexus is an intelligent graph for your private banking relations powered by knowledge-based artificial intelligence.</p>
 </div>
 <center>
 <svg width="1080" height="900"></svg>
@@ -62,9 +62,15 @@ var simulation = d3
   .forceSimulation()
   .force(
     'link',
-    d3.forceLink().id(function(d) {
-      return d.id;
-    })
+    d3
+      .forceLink()
+      .id(function(d) {
+        return d.id;
+      })
+      .distance(function(d) {
+        return 10;
+      })
+      .strength(0.01)
   )
   .force('charge', d3.forceManyBody())
   .force('center', d3.forceCenter(width / 2, height / 2));

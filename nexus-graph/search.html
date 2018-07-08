@@ -1,122 +1,1103 @@
 <!DOCTYPE html>
-<html>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script src="https://d3js.org/d3.v4.min.js"></script>
+<head>
+  <title>Nexus-home</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<meta charset="utf-8">
+<style>
+
+.links line {
+  stroke: #999;
+  stroke-opacity: 0.6;
+}
+
+.nodes circle {
+  stroke: #fff;
+  stroke-width: 1.5px;
+}
+
+text {
+  font-family: sans-serif;
+  font-size: 10px;
+}
+
+</style>
 <body>
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">Nexus</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li><a href="http://localhost/index.html"">Home</a></li>
+        <li class="active"><a href="#">Search</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </nav>
 
-<h2>Nexus submit</h2>
-
-<form>
-  Company 1<br>
-  <input id="c1" type="text" name="firstname" value="9gag">
-  <br>
-  Company 2<br>
-  <input id="c2" type="text" name="lastname" value="01games-technology">
-  <br><br>
-  <input id="submit"type="button" value="Check">
-</form>
-
-<p>See Nexus Live in action</p>
+<body>
+  <div class="container">
+  <div class="page-header">
+  <h1>Nexus Graph <small>Digest Tonnes of data with easily</small></h1>
+</div>
+</div>
+<div class="container">
+<div class="panel panel-default">
+  <div class="panel panel-heading">
+   <h3 class="panel-title">Nexus Lookup Service</h3>
+ </div>
+  <div class="panel-body">
+    <form>
+      Entity 1 <select id="c1" name="entity_one">
+        <option value="">01Games Technology</option>
+<option value="3i-group">3i Group</option>
+<option value="500-startups">500 Startups</option>
+<option value="8-plus-holding">8 Plus Holding</option>
+<option value="8-securities-limited">8 Securities</option>
+<option value="9gag">9GAG</option>
+<option value="ARE">ARE</option>
+<option value="AUS">AUS</option>
+<option value="BRA">BRA</option>
+<option value="CAN">CAN</option>
+<option value="CHE">CHE</option>
+<option value="CHL">CHL</option>
+<option value="CHN">CHN</option>
+<option value="DEU">DEU</option>
+<option value="ESP">ESP</option>
+<option value="EST">EST</option>
+<option value="FRA">FRA</option>
+<option value="GBR">GBR</option>
+<option value="GHA">GHA</option>
+<option value="HKG">HKG</option>
+<option value="IND">IND</option>
+<option value="IRL">IRL</option>
+<option value="ITA">ITA</option>
+<option value="JPN">JPN</option>
+<option value="LBN">LBN</option>
+<option value="LVA">LVA</option>
+<option value="NLD">NLD</option>
+<option value="NOR">NOR</option>
+<option value="PHL">PHL</option>
+<option value="RUS">RUS</option>
+<option value="SGP">SGP</option>
+<option value="SWE">SWE</option>
+<option value="THA">THA</option>
+<option value="TWN">TWN</option>
+<option value="USA">USA</option>
+<option value="VNM">VNM</option>
+<option value="abacuz-limited">Abacuz Limited</option>
+<option value="abc-news-au">ABC News (AU)</option>
+<option value="accel-partners">Accel</option>
+<option value="acceleratorhk">AcceleratorHK</option>
+<option value="access-industries">Access Industries</option>
+<option value="ace-and-company">ACE & Company</option>
+<option value="acesobee">AcesoBee</option>
+<option value="acommerce">aCommerce</option>
+<option value="adam-lindemann">Adam Lindemann</option>
+<option value="aftenposten">Aftenposten</option>
+<option value="aftership">AfterShip</option>
+<option value="agilesource">AgileSource</option>
+<option value="al-jazeera-english">Al Jazeera English</option>
+<option value="alchemist-accelerator">Alchemist Accelerator</option>
+<option value="alexander-petrov">Alexander Petrov</option>
+<option value="alibaba">Alibaba</option>
+<option value="alife-studios-inc">alife studios inc</option>
+<option value="alive-cn">alive.cn</option>
+<option value="allied-pacific-group">Allied Pacific Group</option>
+<option value="allied-pacific-sports-network">Allied Pacific Sports Network</option>
+<option value="altai-technologies">Altai Technologies</option>
+<option value="ambient-sound-investments">Ambient Sound Investments</option>
+<option value="american-life-media">American Life Media</option>
+<option value="amp-credit-technologies">AMP Credit Technologies</option>
+<option value="amperex-technology">Amperex Technology</option>
+<option value="andy-james-2">Andy James</option>
+<option value="angels-founder">Angels + Founder</option>
+<option value="animoca-brands-corporation">Animoca Brands Corporation</option>
+<option value="ann-zhou">Ann Zhou</option>
+<option value="ansa">ANSA.it</option>
+<option value="anshe-chung">Anshe Chung</option>
+<option value="anxa">Anxa</option>
+<option value="appedu">Snapask</option>
+<option value="appeon-corporation">Appeon Corporation</option>
+<option value="appworks-ventures">appWorks Ventures</option>
+<option value="appyhotel">Appy Hotel</option>
+<option value="apta-me">apta.me</option>
+<option value="ardent-capital">Ardent Capital</option>
+<option value="arocrest-captial">Arocrest Captial</option>
+<option value="ars-technica">Ars Technica</option>
+<option value="arthur-kho">Arthur Kho</option>
+<option value="ascentage-pharma">Ascentage Pharma</option>
+<option value="associated-press">Associated Press</option>
+<option value="aster-capital">Aster Capital</option>
+<option value="at-capital">AT Capital</option>
+<option value="aviasales-ru">Aviasales</option>
+<option value="avrio-solutions-company-limited">Avrio Solutions Company Limited</option>
+<option value="banyan-capital-partners">Banyan Capital Partners</option>
+<option value="bbc-news">BBC News</option>
+<option value="ben-ling">Benjamin Ling</option>
+<option value="benjamin-law">Benjamin Law</option>
+<option value="bespokify">Bespokify</option>
+<option value="big-bloom-investment">Big Bloom Investment</option>
+<option value="big-dipper-studio">Big Dipper Studio</option>
+<option value="bigcolros">Bigcolors</option>
+<option value="bild">Bild</option>
+<option value="billy-lueng">Billy Lueng</option>
+<option value="bioserie">Bioserie</option>
+<option value="bioventure-capital">BioVenture Capital</option>
+<option value="bitcoin-opportunity-fund">Digital Currency Group (formerly known as Bitcoin Opportunity Fund)</option>
+<option value="bitmex---bitcoin-mercantile-exchange">BitMEX - Bitcoin Mercantile Exchange</option>
+<option value="bitspark">Bitspark</option>
+<option value="bloomberg">Bloomberg</option>
+<option value="bluebell-group">Bluebell Group</option>
+<option value="blumberg-capital">Blumberg Capital</option>
+<option value="boon-hwee-koh">Boon Hwee Koh</option>
+<option value="boss-roman">Boss Roman</option>
+<option value="boxful">Boxful</option>
+<option value="boxgroup">BoxGroup</option>
+<option value="bpifrance">Bpifrance</option>
+<option value="breitbart-news">Breitbart News</option>
+<option value="business-insider">Business Insider</option>
+<option value="business-switch-pty-ltd">Business Switch Pty Ltd</option>
+<option value="butlur">BUTLUR</option>
+<option value="buzzfeed">Buzzfeed</option>
+<option value="carlton-holdings">Carlton Holdings</option>
+<option value="carlyle-group">The Carlyle Group</option>
+<option value="cashange">Cashange</option>
+<option value="cashyou">CashYou</option>
+<option value="cassia-investments">Cassia Investments</option>
+<option value="catchme">CatchMe!</option>
+<option value="cbc-news">CBC News</option>
+<option value="cbs-news">CBS News</option>
+<option value="ccb-international">CCB International Asset Management</option>
+<option value="cdc-corp">CDC Corporation</option>
+<option value="centurion-investment-management">Centurion Investment Management</option>
+<option value="ceyuan-ventures">Ceyuan Ventures</option>
+<option value="cherubic-ventures">Cherubic Ventures</option>
+<option value="china">China-8</option>
+<option value="china-everbright-international">China Everbright International</option>
+<option value="china-growth-capital">China Growth Capital</option>
+<option value="chinaccelerator">Chinaccelerator</option>
+<option value="chinavision">Alibaba Pictures Group Limited</option>
+<option value="chris-lee-4">Chris Lee</option>
+<option value="cinemawell-com">CinemaWell.com</option>
+<option value="cino-internetwork">Cino Internetwork</option>
+<option value="citi-ventures">Citi Ventures</option>
+<option value="cm-cic-capital-innovation">CM CIC Capital Innovation</option>
+<option value="cmge">CMGE</option>
+<option value="cnbc">CNBC</option>
+<option value="cnn">CNN</option>
+<option value="coachbase">CoachBase</option>
+<option value="codex-genetics">Codex Genetics</option>
+<option value="coent-venture-partners">Coent Venture Partners</option>
+<option value="compare-asia-group">CompareAsiaGroup</option>
+<option value="crowdbaron">Crowdbaron</option>
+<option value="crypto-coins-news">Crypto Coins News</option>
+<option value="cryptonator">Cryptonator</option>
+<option value="crystal-stream">Crystal Stream Capital</option>
+<option value="cyberagent">CyberAgent Ventures</option>
+<option value="cyberport-hong-kong">Cyberport Hong Kong</option>
+<option value="daily-mail">Daily Mail</option>
+<option value="danny-yeung">Danny Yeung</option>
+<option value="dataflow">Dataflow</option>
+<option value="daydaycook">Daydaycook</option>
+<option value="delivery-republic">Delivery Republic</option>
+<option value="der-tagesspiegel">Der Tagesspiegel</option>
+<option value="digisat-technology">DigiSat Technology</option>
+<option value="dinero-limited">Dinero Limited</option>
+<option value="dinglepharb">Dinglepharb</option>
+<option value="directors-loan">Director's Loan</option>
+<option value="diy-watch">DIY.watch</option>
+<option value="dmitry-fedotov">Dmitry Fedotov</option>
+<option value="domain-associates">Domain Associates</option>
+<option value="dragon-law">Dragon Law</option>
+<option value="duriana-angel">Duriana angel</option>
+<option value="e-fever">E-Fever</option>
+<option value="east-ventures">East Ventures</option>
+<option value="easyship-fulfillment-services">Easyship Fulfillment Services</option>
+<option value="easyvan">EasyVan by lalamove</option>
+<option value="ecoport">EcoPort</option>
+<option value="eddingpharm-cayman">Eddingpharm (Cayman)</option>
+<option value="editgrid">EditGrid</option>
+<option value="efficient-corporate">Efficient Corporate</option>
+<option value="efung-capital">EFung Capital</option>
+<option value="engadget">Engadget</option>
+<option value="english-tv">English TV</option>
+<option value="epicforce">EpicForce</option>
+<option value="eqt-holdings">EQT Holdings</option>
+<option value="esn-group">ESN Group</option>
+<option value="exicon">Exicon</option>
+<option value="ezeecube">Ezeecube</option>
+<option value="falafel-games">Falafel Games - Mezzabites Technologies Co., Ltd</option>
+<option value="fih-mobile">FIH Mobile</option>
+<option value="financial-times">Financial Times</option>
+<option value="floship">Floship</option>
+<option value="fly-taxi">Fly Taxi</option>
+<option value="flyingcodes">FlyingCodes</option>
+<option value="focus">Focus</option>
+<option value="fortune">Fortune</option>
+<option value="fox-sports">Fox Sports</option>
+<option value="francis-leung">Francis Leung</option>
+<option value="freestyle-capital">Freestyle Capital</option>
+<option value="frenzoo">Frenzoo</option>
+<option value="fresco-capital-advisors">Fresco Capital</option>
+<option value="friends-of-the-family-hk-social-enterprise">Friends of the Family (HK) Social Enterprise</option>
+<option value="full-global-investments">Leitmotiv Private Equity</option>
+<option value="g-innovator-research-creation">G-Innovator Research & Creation</option>
+<option value="gaifong-app">Gaifong</option>
+<option value="gatecoin">Gatecoin</option>
+<option value="gavenraj-sodhi">Gavenraj Sodhi</option>
+<option value="geek-founders-2">Geek Founders</option>
+<option value="gertan-group">Gertan Group</option>
+<option value="ggv-capital">GGV Capital</option>
+<option value="gobi-partners">Gobi Partners</option>
+<option value="gogovan">GoGoVan</option>
+<option value="golden-gate-ventures">Golden Gate Ventures</option>
+<option value="goldman-sachs">Goldman Sachs</option>
+<option value="good-chow-holdings">Good Chow Holdings</option>
+<option value="google-news">Google News</option>
+<option value="gowell">GoWell</option>
+<option value="grains-valley-venture-capital">Grains Valley Venture Capital</option>
+<option value="grana">Grana</option>
+<option value="great-eagle">Great Eagle</option>
+<option value="gree">GREE</option>
+<option value="grouvly">Grouvly</option>
+<option value="gruenderszene">Gruenderszene</option>
+<option value="gsr-ventures-management">GSR Ventures</option>
+<option value="gurnard-perch-sophisticated-technologies">Gurnard Perch Sophisticated Technologies</option>
+<option value="hacker-news">Hacker News</option>
+<option value="haiyin-venture-partners">Haiyin Venture Partners</option>
+<option value="handelsblatt">Handelsblatt</option>
+<option value="handy">Tink Labs</option>
+<option value="hippomap-technology">Hippomap Technology</option>
+<option value="hiring-screen-2">Hiring Screen</option>
+<option value="hive-im">Hive.im</option>
+<option value="hongkong-thankyou99-hotel-chain-management-group">Hongkong Thankyou99 Hotel Chain Management Group</option>
+<option value="hornet-networks">Hornet Networks</option>
+<option value="hospitality-leaders">Hospitality Leaders</option>
+<option value="hotelquickly">HotelQuickly</option>
+<option value="hugo-barra">Hugo Barra</option>
+<option value="i-marker">i-marker</option>
+<option value="i-meter">i.Meter</option>
+<option value="i2i-logic">i2i Logic</option>
+<option value="ian-grigg">Ian Grigg</option>
+<option value="ibox">ibox Holding Limited</option>
+<option value="ice-angel-id">iCE Angel ‐ ID</option>
+<option value="iclick-interactive">iClick Interactive Asia</option>
+<option value="iconiq-capital">Iconiq Capital</option>
+<option value="idg-accel-china-fund">IDG-Accel China Fund</option>
+<option value="idg-capital-partners">IDG Capital Partners</option>
+<option value="igen6">iGen6 Digi-Marcom Ltd.</option>
+<option value="il-sole-24-ore">Il Sole 24 Ore</option>
+<option value="iloho">iloho</option>
+<option value="imedia-fm">iMedia.fm</option>
+<option value="independent">Independent</option>
+<option value="info-money">InfoMoney</option>
+<option value="ink361">INK limited</option>
+<option value="innohat">Innohat</option>
+<option value="innospace-3">InnoSpace</option>
+<option value="inovia-capital">iNovia Capital</option>
+<option value="inovisi-infracom">Inovisi Infracom</option>
+<option value="insight-robotics">Insight Robotics</option>
+<option value="insight-venture-partners">Insight Venture Partners</option>
+<option value="intuitive-automata">Intuitive Automata</option>
+<option value="inventure-partners">Inventure Partners</option>
+<option value="investlab">InvestLab</option>
+<option value="inwebture-limited">INWEBTURE Limited</option>
+<option value="ipselex">Ipselex</option>
+<option value="itech-capital">iTech Capital</option>
+<option value="itochu-corporation">ITOCHU Corporation</option>
+<option value="iventures-asia-ltd">iVentures Asia Ltd</option>
+<option value="jaha">Jaha</option>
+<option value="james-hong">James Hong</option>
+<option value="japan-asia-investment">Japan Asia Investment</option>
+<option value="jardine-matheson-group">Jardine Matheson Group</option>
+<option value="joe-yi-zhou-chen">Joe (Yi-Zhou) Chen</option>
+<option value="joel-neoh">Joel Neoh</option>
+<option value="johnshout-brothers-platform">Johnshout Brothers Platform</option>
+<option value="k5-ventures">K5</option>
+<option value="kafe-group-limited">KAfe Group Limited</option>
+<option value="kevin-ng">Kevin Ng</option>
+<option value="kickstart-ventures">Kickstart Ventures</option>
+<option value="kingsoft">Kingsoft</option>
+<option value="kirill-maksimov">Kirill Maksimov</option>
+<option value="kites">Kites</option>
+<option value="klook">Klook</option>
+<option value="knex-telecom-limited">Knex Telecom Limited</option>
+<option value="la-repubblica">La Repubblica</option>
+<option value="lakoo">Lakoo</option>
+<option value="lamplight-analytics">Lamplight Analytics</option>
+<option value="lap-man">Lap Man</option>
+<option value="launchpilots">Launchpilots</option>
+<option value="le-monde">Le Monde</option>
+<option value="learnbox">LearnBox</option>
+<option value="lenddo">Lenddo</option>
+<option value="lenta">Lenta</option>
+<option value="leonid-eletskikh">Leonid Eletskikh</option>
+<option value="les-echos">Les Echos</option>
+<option value="life-sreda">Life.SREDA</option>
+<option value="lightspeed-china-partners">Lightspeed China Partners</option>
+<option value="link11-gmbh">Link11 GmBH</option>
+<option value="linktone-limited">Linktone Limited</option>
+<option value="lion-lion-indonesia">Lion & Lion</option>
+<option value="living-farm">Living Farm</option>
+<option value="lonsdale-capital-partners">Lonsdale Capital Partners</option>
+<option value="lucibel">Lucibel</option>
+<option value="lumia-capital">Lumia Capital</option>
+<option value="luxify">Luxify</option>
+<option value="marc-van-der-chijs">Marc van der Chijs</option>
+<option value="marca">Marca</option>
+<option value="mark-oei">Mark Oei</option>
+<option value="mark-pincus">Mark Pincus</option>
+<option value="mars-capital">Mars Capital</option>
+<option value="mashable">Mashable</option>
+<option value="mathias-helleu">Mathias Helleu</option>
+<option value="matrix-partners">Matrix Partners</option>
+<option value="mbc-ventures">MBC Ventures</option>
+<option value="mekong-capital">Mekong Capital</option>
+<option value="melotic">Melotic</option>
+<option value="metamorphic-ventures-llc">Metamorphic Ventures</option>
+<option value="mevp">Middle East Venture Partners (MEVP)</option>
+<option value="microsoft-ventures">Microsoft Ventures</option>
+<option value="mikaal-abdulla">Mikaal Abdulla</option>
+<option value="mindworks-ventures">MindWorks Ventures</option>
+<option value="miq">Get Jamn</option>
+<option value="misohoni">Misohoni</option>
+<option value="mobexo">MOBEXO</option>
+<option value="mobgold">MobGold</option>
+<option value="mobvista">Mobvista</option>
+<option value="monexo-innovations-limited">Monexo Innovations Limited</option>
+<option value="moneyhero-com-hk">MoneyHero.com.hk</option>
+<option value="morningside-group">Morningside Group</option>
+<option value="msnbc">MSNBC</option>
+<option value="mu-ly">Macarne Limited</option>
+<option value="muecs">Muecs</option>
+<option value="multichannel">Multichannel</option>
+<option value="nbc-news">NBC News</option>
+<option value="nest">NEST</option>
+<option value="netease-com">NetEase.com</option>
+<option value="newchinacareer">NewChinaCareer</option>
+<option value="newsmartcom">newsmartcom</option>
+<option value="newsweek">Newsweek</option>
+<option value="nexon">Nexon</option>
+<option value="nissay-capital">Nissay Capital</option>
+<option value="north-asia-resources">North Asia Resources</option>
+<option value="notey">Notey</option>
+<option value="nova-founders">Nova Founders Capital</option>
+<option value="nrk">NRK</option>
+<option value="okay-com">okay.com</option>
+<option value="omidyar-network">Omidyar Network</option>
+<option value="omnistream">Omnistream</option>
+<option value="orbimed-advisors">OrbiMed Advisors</option>
+<option value="origolo-limited">ORIGOLO.COM</option>
+<option value="oriza-seed-capital">Oriza Seed Capital</option>
+<option value="ourcam">OurCam</option>
+<option value="ourpalm">Ourpalm</option>
+<option value="owen-van-natta">Owen Van Natta</option>
+<option value="ozura">Ozura World</option>
+<option value="pandabus">Pandabus</option>
+<option value="partnergo">PartnerGo</option>
+<option value="passkit">PassKit</option>
+<option value="payallies">PayAllies</option>
+<option value="perpetu">Perpetu</option>
+<option value="philip-kaplan">Philip Kaplan</option>
+<option value="phonejoy-solutions">PhoneJoy Solutions</option>
+<option value="photon3d">Photon3D</option>
+<option value="pinnacle-consulting">Pinnacle Consulting</option>
+<option value="playroll">Playroll</option>
+<option value="playto">Playto</option>
+<option value="plotable-ltd-product-simplus-io">Simplus.IO</option>
+<option value="polljoy-limited">Polljoy Limited</option>
+<option value="postcard-tag">Postcard & Tag</option>
+<option value="pradosv">PradoSV</option>
+<option value="precis">Precis</option>
+<option value="prenetics">Prenetics</option>
+<option value="printact">Printact</option>
+<option value="prvt-finance">PRVT finance</option>
+<option value="psm-international">PSM International</option>
+<option value="pyj-dynasty-venture-fund">PYJ-Dynasty Venture Fund</option>
+<option value="quantifeed">Quantifeed</option>
+<option value="qvivo">QVIVO</option>
+<option value="rakr-asset-management-pty-ltd">RAKR Asset Management Pty Ltd</option>
+<option value="raymond-chan">Raymond Chan</option>
+<option value="rbc">RBC</option>
+<option value="reclick">Reclick Inc</option>
+<option value="recode">Recode</option>
+<option value="recruit-net">Recruit.net</option>
+<option value="renren-inc">Renren Inc.</option>
+<option value="reuters">Reuters</option>
+<option value="rgl-holdings-ltd">RGL Holdings Ltd.</option>
+<option value="route-66-ventures">Route 66 Ventures</option>
+<option value="rovux-group-limited">Rovux Group Limited</option>
+<option value="rrj-capital">RRJ Capital</option>
+<option value="rte">RTE</option>
+<option value="ryan-holmes">Ryan Holmes</option>
+<option value="saif-partners">SAIF Partners</option>
+<option value="samson-tam">Samson Tam</option>
+<option value="samuel-chan-2">Samuel Chan</option>
+<option value="satuu">SATUU</option>
+<option value="sbt-venture-capital">SBT Venture Capital</option>
+<option value="scott-banister">Scott Banister</option>
+<option value="scramcard">ScramCard</option>
+<option value="seedcamp">Seedcamp</option>
+<option value="sensbeat">Sensbeat</option>
+<option value="sequoia-capital">Sequoia Capital</option>
+<option value="shakil-khan">Shakil Khan</option>
+<option value="shanda-capital">Shanda Capital</option>
+<option value="shophop">ShopHop</option>
+<option value="shopline">Shopline</option>
+<option value="shou-zi-chew">Shou Zi Chew</option>
+<option value="shunwei-china-internet-fund">Shunwei Capital</option>
+<option value="shuren-hu">Shuren Hu</option>
+<option value="siemer-ventures">Wavemaker Partners</option>
+<option value="simon-siu">Simon Siu</option>
+<option value="simple-wearables">Simple Wearables</option>
+<option value="sinocom-pharmaceutical">Sinocom Pharmaceutical</option>
+<option value="six-waves">6Waves</option>
+<option value="skynet-technology-international">Skynet Technology International</option>
+<option value="skytree-digital">Skytree Digital</option>
+<option value="smart-devices">Smart Devices</option>
+<option value="snapteeapp">Snaptee</option>
+<option value="social-media-broadcasts-smb-limited">Social Media Broadcasts (SMB) Limited</option>
+<option value="softlation">Softlation</option>
+<option value="sosventures">SOSV</option>
+<option value="soundwill-holdings">Soundwill Holdings</option>
+<option value="spacious">Spacious</option>
+<option value="spiegel-online">Spiegel Online</option>
+<option value="spothelp">SpotHelp</option>
+<option value="spottly">Spottly</option>
+<option value="ssf-government">SSF Government</option>
+<option value="stampsy">another name</option>
+<option value="start-fellows">Start Fellows</option>
+<option value="start-up-chile">Start-Up Chile</option>
+<option value="stein-jakob-oeie">Stein Jakob Oeie</option>
+<option value="stepcase">Stepcase</option>
+<option value="steve-kirsch">Steve Kirsch</option>
+<option value="stewart-milne-group">Stewart Milne Group</option>
+<option value="sudinnova">Sudinnova</option>
+<option value="surroundapp">Surround App</option>
+<option value="svenska-dagbladet">Svenska Dagbladet</option>
+<option value="swish">Swish</option>
+<option value="sxe-ventures">SXE Ventures</option>
+<option value="talkbox-voice-messenger">TalkBox Limited</option>
+<option value="talkpush">Talkpush</option>
+<option value="target-software">Target Software</option>
+<option value="taxizu">Taxizu</option>
+<option value="techcrunch">TechCrunch</option>
+<option value="techcrunch-cn">TechCrunch (CN)</option>
+<option value="techpacker">Techpacker</option>
+<option value="testin">Testin Technologies</option>
+<option value="the-economist">The Economist</option>
+<option value="the-globe-and-mail">The Globe And Mail</option>
+<option value="the-guardian-au">The Guardian (AU)</option>
+<option value="the-hindu">The Hindu</option>
+<option value="the-huffington-post">The Huffington Post</option>
+<option value="the-irish-times">The Irish Times</option>
+<option value="the-new-york-times">The New York Times</option>
+<option value="the-next-web">The Next Web</option>
+<option value="the-telegraph">The Telegraph</option>
+<option value="the-times-of-india">The Times of India</option>
+<option value="the-verge">The Verge</option>
+<option value="the-wall-street-journal">The Wall Street Journal</option>
+<option value="the-washington-post">The Washington Post</option>
+<option value="time">Time</option>
+<option value="tinghsin-group">Tinghsin Group</option>
+<option value="tnt-luxury-group">TNT Luxury Group</option>
+<option value="toivo-annus">Toivo Annus</option>
+<option value="tom-beecroft">Tom Beecroft</option>
+<option value="tom-group">TOM Group Limited</option>
+<option value="toro">Toro Development</option>
+<option value="touchmobi">Touchmobi</option>
+<option value="travelzen-com">Travelzen.com</option>
+<option value="tripper-2">Tripper</option>
+<option value="twofour54">twofour54</option>
+<option value="tytus-michalski">Tytus Michalski</option>
+<option value="uhoo">UHOO</option>
+<option value="ule">Ule</option>
+<option value="umbrella-here">Umbrella Here</option>
+<option value="unlimited-capital">Unlimited Capital</option>
+<option value="usa-today">USA Today</option>
+<option value="vantagepoint-capital-partners">VantagePoint Capital Partners</option>
+<option value="variab-ly">Variab.ly</option>
+<option value="vectr">Vectr Ventures</option>
+<option value="vega-properties">Vega Properties</option>
+<option value="velolicity-capital-bv">Velocity Capital Private Equity</option>
+<option value="venuehub-hk">VenueHub.hk</option>
+<option value="vice-news">Vice News</option>
+<option value="vidon-me">VidOn.me</option>
+<option value="viss">Viss</option>
+<option value="vitargent">Vitargent</option>
+<option value="vivian-lau">Vivian Lau</option>
+<option value="vpg-asia">VPG Asia</option>
+<option value="vscoop-hong-kong">Vscoop Hong Kong</option>
+<option value="welab">WeLab</option>
+<option value="wi-harper-group">WI Harper Group</option>
+<option value="william-e-heinecke">William E. Heinecke</option>
+<option value="william-lee-8">William Lee</option>
+<option value="wing-wheel-angel-culture-communication">Wing-Wheel Angel Culture Communication</option>
+<option value="wired">Wired</option>
+<option value="wirtschafts-woche">Wirtschafts Woche</option>
+<option value="wongs-international-holdings">Wong's International Holdings</option>
+<option value="wow-app-inc">WOW App Inc.</option>
+<option value="wu-xiaoguang">Wu Xiaoguang</option>
+<option value="xinhua-financial-network">Xinhua Financial Network</option>
+<option value="y-combinator">Y Combinator</option>
+<option value="yat-siu">Yat Siu</option>
+<option value="yodh-power-and-technologies-group-limited">Yodh Power and Technologies Group Limited</option>
+<option value="yuanming-capital">YuanMing Capital</option>
+<option value="yuri-milner">Yuri Milner</option>
+<option value="z-good">Z-good</option>
+<option value="zero-one-network-international-limited">Zero One Network International Limited</option>
+<option value="zeuscontrols">ZeusControls</option>
+<option value="zhemin-hu">Zhemin Hu</option>
+<option value="zingly">Zingly</option>
+      </select>
+      <br>
+      Entity 2
+      <select id="c2" name="entity_two">
+        <option value="">01Games Technology</option>
+<option value="3i-group">3i Group</option>
+<option value="500-startups">500 Startups</option>
+<option value="8-plus-holding">8 Plus Holding</option>
+<option value="8-securities-limited">8 Securities</option>
+<option value="9gag">9GAG</option>
+<option value="ARE">ARE</option>
+<option value="AUS">AUS</option>
+<option value="BRA">BRA</option>
+<option value="CAN">CAN</option>
+<option value="CHE">CHE</option>
+<option value="CHL">CHL</option>
+<option value="CHN">CHN</option>
+<option value="DEU">DEU</option>
+<option value="ESP">ESP</option>
+<option value="EST">EST</option>
+<option value="FRA">FRA</option>
+<option value="GBR">GBR</option>
+<option value="GHA">GHA</option>
+<option value="HKG">HKG</option>
+<option value="IND">IND</option>
+<option value="IRL">IRL</option>
+<option value="ITA">ITA</option>
+<option value="JPN">JPN</option>
+<option value="LBN">LBN</option>
+<option value="LVA">LVA</option>
+<option value="NLD">NLD</option>
+<option value="NOR">NOR</option>
+<option value="PHL">PHL</option>
+<option value="RUS">RUS</option>
+<option value="SGP">SGP</option>
+<option value="SWE">SWE</option>
+<option value="THA">THA</option>
+<option value="TWN">TWN</option>
+<option value="USA">USA</option>
+<option value="VNM">VNM</option>
+<option value="abacuz-limited">Abacuz Limited</option>
+<option value="abc-news-au">ABC News (AU)</option>
+<option value="accel-partners">Accel</option>
+<option value="acceleratorhk">AcceleratorHK</option>
+<option value="access-industries">Access Industries</option>
+<option value="ace-and-company">ACE & Company</option>
+<option value="acesobee">AcesoBee</option>
+<option value="acommerce">aCommerce</option>
+<option value="adam-lindemann">Adam Lindemann</option>
+<option value="aftenposten">Aftenposten</option>
+<option value="aftership">AfterShip</option>
+<option value="agilesource">AgileSource</option>
+<option value="al-jazeera-english">Al Jazeera English</option>
+<option value="alchemist-accelerator">Alchemist Accelerator</option>
+<option value="alexander-petrov">Alexander Petrov</option>
+<option value="alibaba">Alibaba</option>
+<option value="alife-studios-inc">alife studios inc</option>
+<option value="alive-cn">alive.cn</option>
+<option value="allied-pacific-group">Allied Pacific Group</option>
+<option value="allied-pacific-sports-network">Allied Pacific Sports Network</option>
+<option value="altai-technologies">Altai Technologies</option>
+<option value="ambient-sound-investments">Ambient Sound Investments</option>
+<option value="american-life-media">American Life Media</option>
+<option value="amp-credit-technologies">AMP Credit Technologies</option>
+<option value="amperex-technology">Amperex Technology</option>
+<option value="andy-james-2">Andy James</option>
+<option value="angels-founder">Angels + Founder</option>
+<option value="animoca-brands-corporation">Animoca Brands Corporation</option>
+<option value="ann-zhou">Ann Zhou</option>
+<option value="ansa">ANSA.it</option>
+<option value="anshe-chung">Anshe Chung</option>
+<option value="anxa">Anxa</option>
+<option value="appedu">Snapask</option>
+<option value="appeon-corporation">Appeon Corporation</option>
+<option value="appworks-ventures">appWorks Ventures</option>
+<option value="appyhotel">Appy Hotel</option>
+<option value="apta-me">apta.me</option>
+<option value="ardent-capital">Ardent Capital</option>
+<option value="arocrest-captial">Arocrest Captial</option>
+<option value="ars-technica">Ars Technica</option>
+<option value="arthur-kho">Arthur Kho</option>
+<option value="ascentage-pharma">Ascentage Pharma</option>
+<option value="associated-press">Associated Press</option>
+<option value="aster-capital">Aster Capital</option>
+<option value="at-capital">AT Capital</option>
+<option value="aviasales-ru">Aviasales</option>
+<option value="avrio-solutions-company-limited">Avrio Solutions Company Limited</option>
+<option value="banyan-capital-partners">Banyan Capital Partners</option>
+<option value="bbc-news">BBC News</option>
+<option value="ben-ling">Benjamin Ling</option>
+<option value="benjamin-law">Benjamin Law</option>
+<option value="bespokify">Bespokify</option>
+<option value="big-bloom-investment">Big Bloom Investment</option>
+<option value="big-dipper-studio">Big Dipper Studio</option>
+<option value="bigcolros">Bigcolors</option>
+<option value="bild">Bild</option>
+<option value="billy-lueng">Billy Lueng</option>
+<option value="bioserie">Bioserie</option>
+<option value="bioventure-capital">BioVenture Capital</option>
+<option value="bitcoin-opportunity-fund">Digital Currency Group (formerly known as Bitcoin Opportunity Fund)</option>
+<option value="bitmex---bitcoin-mercantile-exchange">BitMEX - Bitcoin Mercantile Exchange</option>
+<option value="bitspark">Bitspark</option>
+<option value="bloomberg">Bloomberg</option>
+<option value="bluebell-group">Bluebell Group</option>
+<option value="blumberg-capital">Blumberg Capital</option>
+<option value="boon-hwee-koh">Boon Hwee Koh</option>
+<option value="boss-roman">Boss Roman</option>
+<option value="boxful">Boxful</option>
+<option value="boxgroup">BoxGroup</option>
+<option value="bpifrance">Bpifrance</option>
+<option value="breitbart-news">Breitbart News</option>
+<option value="business-insider">Business Insider</option>
+<option value="business-switch-pty-ltd">Business Switch Pty Ltd</option>
+<option value="butlur">BUTLUR</option>
+<option value="buzzfeed">Buzzfeed</option>
+<option value="carlton-holdings">Carlton Holdings</option>
+<option value="carlyle-group">The Carlyle Group</option>
+<option value="cashange">Cashange</option>
+<option value="cashyou">CashYou</option>
+<option value="cassia-investments">Cassia Investments</option>
+<option value="catchme">CatchMe!</option>
+<option value="cbc-news">CBC News</option>
+<option value="cbs-news">CBS News</option>
+<option value="ccb-international">CCB International Asset Management</option>
+<option value="cdc-corp">CDC Corporation</option>
+<option value="centurion-investment-management">Centurion Investment Management</option>
+<option value="ceyuan-ventures">Ceyuan Ventures</option>
+<option value="cherubic-ventures">Cherubic Ventures</option>
+<option value="china">China-8</option>
+<option value="china-everbright-international">China Everbright International</option>
+<option value="china-growth-capital">China Growth Capital</option>
+<option value="chinaccelerator">Chinaccelerator</option>
+<option value="chinavision">Alibaba Pictures Group Limited</option>
+<option value="chris-lee-4">Chris Lee</option>
+<option value="cinemawell-com">CinemaWell.com</option>
+<option value="cino-internetwork">Cino Internetwork</option>
+<option value="citi-ventures">Citi Ventures</option>
+<option value="cm-cic-capital-innovation">CM CIC Capital Innovation</option>
+<option value="cmge">CMGE</option>
+<option value="cnbc">CNBC</option>
+<option value="cnn">CNN</option>
+<option value="coachbase">CoachBase</option>
+<option value="codex-genetics">Codex Genetics</option>
+<option value="coent-venture-partners">Coent Venture Partners</option>
+<option value="compare-asia-group">CompareAsiaGroup</option>
+<option value="crowdbaron">Crowdbaron</option>
+<option value="crypto-coins-news">Crypto Coins News</option>
+<option value="cryptonator">Cryptonator</option>
+<option value="crystal-stream">Crystal Stream Capital</option>
+<option value="cyberagent">CyberAgent Ventures</option>
+<option value="cyberport-hong-kong">Cyberport Hong Kong</option>
+<option value="daily-mail">Daily Mail</option>
+<option value="danny-yeung">Danny Yeung</option>
+<option value="dataflow">Dataflow</option>
+<option value="daydaycook">Daydaycook</option>
+<option value="delivery-republic">Delivery Republic</option>
+<option value="der-tagesspiegel">Der Tagesspiegel</option>
+<option value="digisat-technology">DigiSat Technology</option>
+<option value="dinero-limited">Dinero Limited</option>
+<option value="dinglepharb">Dinglepharb</option>
+<option value="directors-loan">Director's Loan</option>
+<option value="diy-watch">DIY.watch</option>
+<option value="dmitry-fedotov">Dmitry Fedotov</option>
+<option value="domain-associates">Domain Associates</option>
+<option value="dragon-law">Dragon Law</option>
+<option value="duriana-angel">Duriana angel</option>
+<option value="e-fever">E-Fever</option>
+<option value="east-ventures">East Ventures</option>
+<option value="easyship-fulfillment-services">Easyship Fulfillment Services</option>
+<option value="easyvan">EasyVan by lalamove</option>
+<option value="ecoport">EcoPort</option>
+<option value="eddingpharm-cayman">Eddingpharm (Cayman)</option>
+<option value="editgrid">EditGrid</option>
+<option value="efficient-corporate">Efficient Corporate</option>
+<option value="efung-capital">EFung Capital</option>
+<option value="engadget">Engadget</option>
+<option value="english-tv">English TV</option>
+<option value="epicforce">EpicForce</option>
+<option value="eqt-holdings">EQT Holdings</option>
+<option value="esn-group">ESN Group</option>
+<option value="exicon">Exicon</option>
+<option value="ezeecube">Ezeecube</option>
+<option value="falafel-games">Falafel Games - Mezzabites Technologies Co., Ltd</option>
+<option value="fih-mobile">FIH Mobile</option>
+<option value="financial-times">Financial Times</option>
+<option value="floship">Floship</option>
+<option value="fly-taxi">Fly Taxi</option>
+<option value="flyingcodes">FlyingCodes</option>
+<option value="focus">Focus</option>
+<option value="fortune">Fortune</option>
+<option value="fox-sports">Fox Sports</option>
+<option value="francis-leung">Francis Leung</option>
+<option value="freestyle-capital">Freestyle Capital</option>
+<option value="frenzoo">Frenzoo</option>
+<option value="fresco-capital-advisors">Fresco Capital</option>
+<option value="friends-of-the-family-hk-social-enterprise">Friends of the Family (HK) Social Enterprise</option>
+<option value="full-global-investments">Leitmotiv Private Equity</option>
+<option value="g-innovator-research-creation">G-Innovator Research & Creation</option>
+<option value="gaifong-app">Gaifong</option>
+<option value="gatecoin">Gatecoin</option>
+<option value="gavenraj-sodhi">Gavenraj Sodhi</option>
+<option value="geek-founders-2">Geek Founders</option>
+<option value="gertan-group">Gertan Group</option>
+<option value="ggv-capital">GGV Capital</option>
+<option value="gobi-partners">Gobi Partners</option>
+<option value="gogovan">GoGoVan</option>
+<option value="golden-gate-ventures">Golden Gate Ventures</option>
+<option value="goldman-sachs">Goldman Sachs</option>
+<option value="good-chow-holdings">Good Chow Holdings</option>
+<option value="google-news">Google News</option>
+<option value="gowell">GoWell</option>
+<option value="grains-valley-venture-capital">Grains Valley Venture Capital</option>
+<option value="grana">Grana</option>
+<option value="great-eagle">Great Eagle</option>
+<option value="gree">GREE</option>
+<option value="grouvly">Grouvly</option>
+<option value="gruenderszene">Gruenderszene</option>
+<option value="gsr-ventures-management">GSR Ventures</option>
+<option value="gurnard-perch-sophisticated-technologies">Gurnard Perch Sophisticated Technologies</option>
+<option value="hacker-news">Hacker News</option>
+<option value="haiyin-venture-partners">Haiyin Venture Partners</option>
+<option value="handelsblatt">Handelsblatt</option>
+<option value="handy">Tink Labs</option>
+<option value="hippomap-technology">Hippomap Technology</option>
+<option value="hiring-screen-2">Hiring Screen</option>
+<option value="hive-im">Hive.im</option>
+<option value="hongkong-thankyou99-hotel-chain-management-group">Hongkong Thankyou99 Hotel Chain Management Group</option>
+<option value="hornet-networks">Hornet Networks</option>
+<option value="hospitality-leaders">Hospitality Leaders</option>
+<option value="hotelquickly">HotelQuickly</option>
+<option value="hugo-barra">Hugo Barra</option>
+<option value="i-marker">i-marker</option>
+<option value="i-meter">i.Meter</option>
+<option value="i2i-logic">i2i Logic</option>
+<option value="ian-grigg">Ian Grigg</option>
+<option value="ibox">ibox Holding Limited</option>
+<option value="ice-angel-id">iCE Angel ‐ ID</option>
+<option value="iclick-interactive">iClick Interactive Asia</option>
+<option value="iconiq-capital">Iconiq Capital</option>
+<option value="idg-accel-china-fund">IDG-Accel China Fund</option>
+<option value="idg-capital-partners">IDG Capital Partners</option>
+<option value="igen6">iGen6 Digi-Marcom Ltd.</option>
+<option value="il-sole-24-ore">Il Sole 24 Ore</option>
+<option value="iloho">iloho</option>
+<option value="imedia-fm">iMedia.fm</option>
+<option value="independent">Independent</option>
+<option value="info-money">InfoMoney</option>
+<option value="ink361">INK limited</option>
+<option value="innohat">Innohat</option>
+<option value="innospace-3">InnoSpace</option>
+<option value="inovia-capital">iNovia Capital</option>
+<option value="inovisi-infracom">Inovisi Infracom</option>
+<option value="insight-robotics">Insight Robotics</option>
+<option value="insight-venture-partners">Insight Venture Partners</option>
+<option value="intuitive-automata">Intuitive Automata</option>
+<option value="inventure-partners">Inventure Partners</option>
+<option value="investlab">InvestLab</option>
+<option value="inwebture-limited">INWEBTURE Limited</option>
+<option value="ipselex">Ipselex</option>
+<option value="itech-capital">iTech Capital</option>
+<option value="itochu-corporation">ITOCHU Corporation</option>
+<option value="iventures-asia-ltd">iVentures Asia Ltd</option>
+<option value="jaha">Jaha</option>
+<option value="james-hong">James Hong</option>
+<option value="japan-asia-investment">Japan Asia Investment</option>
+<option value="jardine-matheson-group">Jardine Matheson Group</option>
+<option value="joe-yi-zhou-chen">Joe (Yi-Zhou) Chen</option>
+<option value="joel-neoh">Joel Neoh</option>
+<option value="johnshout-brothers-platform">Johnshout Brothers Platform</option>
+<option value="k5-ventures">K5</option>
+<option value="kafe-group-limited">KAfe Group Limited</option>
+<option value="kevin-ng">Kevin Ng</option>
+<option value="kickstart-ventures">Kickstart Ventures</option>
+<option value="kingsoft">Kingsoft</option>
+<option value="kirill-maksimov">Kirill Maksimov</option>
+<option value="kites">Kites</option>
+<option value="klook">Klook</option>
+<option value="knex-telecom-limited">Knex Telecom Limited</option>
+<option value="la-repubblica">La Repubblica</option>
+<option value="lakoo">Lakoo</option>
+<option value="lamplight-analytics">Lamplight Analytics</option>
+<option value="lap-man">Lap Man</option>
+<option value="launchpilots">Launchpilots</option>
+<option value="le-monde">Le Monde</option>
+<option value="learnbox">LearnBox</option>
+<option value="lenddo">Lenddo</option>
+<option value="lenta">Lenta</option>
+<option value="leonid-eletskikh">Leonid Eletskikh</option>
+<option value="les-echos">Les Echos</option>
+<option value="life-sreda">Life.SREDA</option>
+<option value="lightspeed-china-partners">Lightspeed China Partners</option>
+<option value="link11-gmbh">Link11 GmBH</option>
+<option value="linktone-limited">Linktone Limited</option>
+<option value="lion-lion-indonesia">Lion & Lion</option>
+<option value="living-farm">Living Farm</option>
+<option value="lonsdale-capital-partners">Lonsdale Capital Partners</option>
+<option value="lucibel">Lucibel</option>
+<option value="lumia-capital">Lumia Capital</option>
+<option value="luxify">Luxify</option>
+<option value="marc-van-der-chijs">Marc van der Chijs</option>
+<option value="marca">Marca</option>
+<option value="mark-oei">Mark Oei</option>
+<option value="mark-pincus">Mark Pincus</option>
+<option value="mars-capital">Mars Capital</option>
+<option value="mashable">Mashable</option>
+<option value="mathias-helleu">Mathias Helleu</option>
+<option value="matrix-partners">Matrix Partners</option>
+<option value="mbc-ventures">MBC Ventures</option>
+<option value="mekong-capital">Mekong Capital</option>
+<option value="melotic">Melotic</option>
+<option value="metamorphic-ventures-llc">Metamorphic Ventures</option>
+<option value="mevp">Middle East Venture Partners (MEVP)</option>
+<option value="microsoft-ventures">Microsoft Ventures</option>
+<option value="mikaal-abdulla">Mikaal Abdulla</option>
+<option value="mindworks-ventures">MindWorks Ventures</option>
+<option value="miq">Get Jamn</option>
+<option value="misohoni">Misohoni</option>
+<option value="mobexo">MOBEXO</option>
+<option value="mobgold">MobGold</option>
+<option value="mobvista">Mobvista</option>
+<option value="monexo-innovations-limited">Monexo Innovations Limited</option>
+<option value="moneyhero-com-hk">MoneyHero.com.hk</option>
+<option value="morningside-group">Morningside Group</option>
+<option value="msnbc">MSNBC</option>
+<option value="mu-ly">Macarne Limited</option>
+<option value="muecs">Muecs</option>
+<option value="multichannel">Multichannel</option>
+<option value="nbc-news">NBC News</option>
+<option value="nest">NEST</option>
+<option value="netease-com">NetEase.com</option>
+<option value="newchinacareer">NewChinaCareer</option>
+<option value="newsmartcom">newsmartcom</option>
+<option value="newsweek">Newsweek</option>
+<option value="nexon">Nexon</option>
+<option value="nissay-capital">Nissay Capital</option>
+<option value="north-asia-resources">North Asia Resources</option>
+<option value="notey">Notey</option>
+<option value="nova-founders">Nova Founders Capital</option>
+<option value="nrk">NRK</option>
+<option value="okay-com">okay.com</option>
+<option value="omidyar-network">Omidyar Network</option>
+<option value="omnistream">Omnistream</option>
+<option value="orbimed-advisors">OrbiMed Advisors</option>
+<option value="origolo-limited">ORIGOLO.COM</option>
+<option value="oriza-seed-capital">Oriza Seed Capital</option>
+<option value="ourcam">OurCam</option>
+<option value="ourpalm">Ourpalm</option>
+<option value="owen-van-natta">Owen Van Natta</option>
+<option value="ozura">Ozura World</option>
+<option value="pandabus">Pandabus</option>
+<option value="partnergo">PartnerGo</option>
+<option value="passkit">PassKit</option>
+<option value="payallies">PayAllies</option>
+<option value="perpetu">Perpetu</option>
+<option value="philip-kaplan">Philip Kaplan</option>
+<option value="phonejoy-solutions">PhoneJoy Solutions</option>
+<option value="photon3d">Photon3D</option>
+<option value="pinnacle-consulting">Pinnacle Consulting</option>
+<option value="playroll">Playroll</option>
+<option value="playto">Playto</option>
+<option value="plotable-ltd-product-simplus-io">Simplus.IO</option>
+<option value="polljoy-limited">Polljoy Limited</option>
+<option value="postcard-tag">Postcard & Tag</option>
+<option value="pradosv">PradoSV</option>
+<option value="precis">Precis</option>
+<option value="prenetics">Prenetics</option>
+<option value="printact">Printact</option>
+<option value="prvt-finance">PRVT finance</option>
+<option value="psm-international">PSM International</option>
+<option value="pyj-dynasty-venture-fund">PYJ-Dynasty Venture Fund</option>
+<option value="quantifeed">Quantifeed</option>
+<option value="qvivo">QVIVO</option>
+<option value="rakr-asset-management-pty-ltd">RAKR Asset Management Pty Ltd</option>
+<option value="raymond-chan">Raymond Chan</option>
+<option value="rbc">RBC</option>
+<option value="reclick">Reclick Inc</option>
+<option value="recode">Recode</option>
+<option value="recruit-net">Recruit.net</option>
+<option value="renren-inc">Renren Inc.</option>
+<option value="reuters">Reuters</option>
+<option value="rgl-holdings-ltd">RGL Holdings Ltd.</option>
+<option value="route-66-ventures">Route 66 Ventures</option>
+<option value="rovux-group-limited">Rovux Group Limited</option>
+<option value="rrj-capital">RRJ Capital</option>
+<option value="rte">RTE</option>
+<option value="ryan-holmes">Ryan Holmes</option>
+<option value="saif-partners">SAIF Partners</option>
+<option value="samson-tam">Samson Tam</option>
+<option value="samuel-chan-2">Samuel Chan</option>
+<option value="satuu">SATUU</option>
+<option value="sbt-venture-capital">SBT Venture Capital</option>
+<option value="scott-banister">Scott Banister</option>
+<option value="scramcard">ScramCard</option>
+<option value="seedcamp">Seedcamp</option>
+<option value="sensbeat">Sensbeat</option>
+<option value="sequoia-capital">Sequoia Capital</option>
+<option value="shakil-khan">Shakil Khan</option>
+<option value="shanda-capital">Shanda Capital</option>
+<option value="shophop">ShopHop</option>
+<option value="shopline">Shopline</option>
+<option value="shou-zi-chew">Shou Zi Chew</option>
+<option value="shunwei-china-internet-fund">Shunwei Capital</option>
+<option value="shuren-hu">Shuren Hu</option>
+<option value="siemer-ventures">Wavemaker Partners</option>
+<option value="simon-siu">Simon Siu</option>
+<option value="simple-wearables">Simple Wearables</option>
+<option value="sinocom-pharmaceutical">Sinocom Pharmaceutical</option>
+<option value="six-waves">6Waves</option>
+<option value="skynet-technology-international">Skynet Technology International</option>
+<option value="skytree-digital">Skytree Digital</option>
+<option value="smart-devices">Smart Devices</option>
+<option value="snapteeapp">Snaptee</option>
+<option value="social-media-broadcasts-smb-limited">Social Media Broadcasts (SMB) Limited</option>
+<option value="softlation">Softlation</option>
+<option value="sosventures">SOSV</option>
+<option value="soundwill-holdings">Soundwill Holdings</option>
+<option value="spacious">Spacious</option>
+<option value="spiegel-online">Spiegel Online</option>
+<option value="spothelp">SpotHelp</option>
+<option value="spottly">Spottly</option>
+<option value="ssf-government">SSF Government</option>
+<option value="stampsy">another name</option>
+<option value="start-fellows">Start Fellows</option>
+<option value="start-up-chile">Start-Up Chile</option>
+<option value="stein-jakob-oeie">Stein Jakob Oeie</option>
+<option value="stepcase">Stepcase</option>
+<option value="steve-kirsch">Steve Kirsch</option>
+<option value="stewart-milne-group">Stewart Milne Group</option>
+<option value="sudinnova">Sudinnova</option>
+<option value="surroundapp">Surround App</option>
+<option value="svenska-dagbladet">Svenska Dagbladet</option>
+<option value="swish">Swish</option>
+<option value="sxe-ventures">SXE Ventures</option>
+<option value="talkbox-voice-messenger">TalkBox Limited</option>
+<option value="talkpush">Talkpush</option>
+<option value="target-software">Target Software</option>
+<option value="taxizu">Taxizu</option>
+<option value="techcrunch">TechCrunch</option>
+<option value="techcrunch-cn">TechCrunch (CN)</option>
+<option value="techpacker">Techpacker</option>
+<option value="testin">Testin Technologies</option>
+<option value="the-economist">The Economist</option>
+<option value="the-globe-and-mail">The Globe And Mail</option>
+<option value="the-guardian-au">The Guardian (AU)</option>
+<option value="the-hindu">The Hindu</option>
+<option value="the-huffington-post">The Huffington Post</option>
+<option value="the-irish-times">The Irish Times</option>
+<option value="the-new-york-times">The New York Times</option>
+<option value="the-next-web">The Next Web</option>
+<option value="the-telegraph">The Telegraph</option>
+<option value="the-times-of-india">The Times of India</option>
+<option value="the-verge">The Verge</option>
+<option value="the-wall-street-journal">The Wall Street Journal</option>
+<option value="the-washington-post">The Washington Post</option>
+<option value="time">Time</option>
+<option value="tinghsin-group">Tinghsin Group</option>
+<option value="tnt-luxury-group">TNT Luxury Group</option>
+<option value="toivo-annus">Toivo Annus</option>
+<option value="tom-beecroft">Tom Beecroft</option>
+<option value="tom-group">TOM Group Limited</option>
+<option value="toro">Toro Development</option>
+<option value="touchmobi">Touchmobi</option>
+<option value="travelzen-com">Travelzen.com</option>
+<option value="tripper-2">Tripper</option>
+<option value="twofour54">twofour54</option>
+<option value="tytus-michalski">Tytus Michalski</option>
+<option value="uhoo">UHOO</option>
+<option value="ule">Ule</option>
+<option value="umbrella-here">Umbrella Here</option>
+<option value="unlimited-capital">Unlimited Capital</option>
+<option value="usa-today">USA Today</option>
+<option value="vantagepoint-capital-partners">VantagePoint Capital Partners</option>
+<option value="variab-ly">Variab.ly</option>
+<option value="vectr">Vectr Ventures</option>
+<option value="vega-properties">Vega Properties</option>
+<option value="velolicity-capital-bv">Velocity Capital Private Equity</option>
+<option value="venuehub-hk">VenueHub.hk</option>
+<option value="vice-news">Vice News</option>
+<option value="vidon-me">VidOn.me</option>
+<option value="viss">Viss</option>
+<option value="vitargent">Vitargent</option>
+<option value="vivian-lau">Vivian Lau</option>
+<option value="vpg-asia">VPG Asia</option>
+<option value="vscoop-hong-kong">Vscoop Hong Kong</option>
+<option value="welab">WeLab</option>
+<option value="wi-harper-group">WI Harper Group</option>
+<option value="william-e-heinecke">William E. Heinecke</option>
+<option value="william-lee-8">William Lee</option>
+<option value="wing-wheel-angel-culture-communication">Wing-Wheel Angel Culture Communication</option>
+<option value="wired">Wired</option>
+<option value="wirtschafts-woche">Wirtschafts Woche</option>
+<option value="wongs-international-holdings">Wong's International Holdings</option>
+<option value="wow-app-inc">WOW App Inc.</option>
+<option value="wu-xiaoguang">Wu Xiaoguang</option>
+<option value="xinhua-financial-network">Xinhua Financial Network</option>
+<option value="y-combinator">Y Combinator</option>
+<option value="yat-siu">Yat Siu</option>
+<option value="yodh-power-and-technologies-group-limited">Yodh Power and Technologies Group Limited</option>
+<option value="yuanming-capital">YuanMing Capital</option>
+<option value="yuri-milner">Yuri Milner</option>
+<option value="z-good">Z-good</option>
+<option value="zero-one-network-international-limited">Zero One Network International Limited</option>
+<option value="zeuscontrols">ZeusControls</option>
+<option value="zhemin-hu">Zhemin Hu</option>
+<option value="zingly">Zingly</option>
+      </select>
+      <br>
+      Max Degree of Separation <input id="c3" type="number" name="cutoff" min="1"/>
+      <input id="submit"type="button" value="Check">
+    </form>
+  </div>
+</div>
+</div>
 
 </body>
 </html>
 
 <script>
+function clearjQueryCache() {
+  for (var x in jQuery.cache) {
+    delete jQuery.cache[x];
+  }
+}
+
 var c1 = $('#c1').val();
 var c2 = $('#c2').val();
-var data = { entity_one: c1, entity_two: c2, cutoff: 6 };
+var c3 = $('#c3').val();
+var data = { entity_one: c1, entity_two: c2, cutoff: c3 };
 
 $('#submit').click(function() {
+  var c1 = $('#c1').val();
+  var c2 = $('#c2').val();
+  var c3 = $('#c3').val();
+  var data = { entity_one: c1, entity_two: c2, cutoff: c3 };
   var jqxhr = $.get(
     'http://localhost:5000/get_graph?' + $.param(data),
     function(graph) {
-      var svg = d3.select('svg'),
-        width = +svg.attr('width'),
-        height = +svg.attr('height');
-
-      var color = d3.scaleOrdinal(d3.schemeCategory20);
-
-      var simulation = d3
-        .forceSimulation()
-        .force(
-          'link',
-          d3.forceLink().id(function(d) {
-            return d.id;
-          })
-        )
-        .force('charge', d3.forceManyBody())
-        .force('center', d3.forceCenter(width / 2, height / 2));
-
-      var link = svg
-        .append('g')
-        .attr('class', 'links')
-        .selectAll('line')
-        .data(graph.links)
-        .enter()
-        .append('line')
-        .attr('stroke-width', function(d) {
-          return Math.sqrt(d.value);
-        });
-
-      var node = svg
-        .append('g')
-        .attr('class', 'nodes')
-        .selectAll('g')
-        .data(graph.nodes)
-        .enter()
-        .append('g');
-
-      var circles = node
-        .append('circle')
-        .attr('r', 10)
-        .attr('fill', function(d) {
-          return color(d.group);
-        })
-        .call(
-          d3
-            .drag()
-            .on('start', dragstarted)
-            .on('drag', dragged)
-            .on('end', dragended)
-        );
-
-      var lables = node
-        .append('text')
-        .text(function(d) {
-          return d.id;
-        })
-        .attr('x', 6)
-        .attr('y', 3);
-
-      node.append('title').text(function(d) {
-        return d.id;
-      });
-
-      simulation.nodes(graph.nodes).on('tick', ticked);
-
-      simulation.force('link').links(graph.links);
-
-      function ticked() {
-        link
-          .attr('x1', function(d) {
-            return d.source.x;
-          })
-          .attr('y1', function(d) {
-            return d.source.y;
-          })
-          .attr('x2', function(d) {
-            return d.target.x;
-          })
-          .attr('y2', function(d) {
-            return d.target.y;
-          });
-
-        node.attr('transform', function(d) {
-          return 'translate(' + d.x + ',' + d.y + ')';
-        });
-      }
+      console.log('done');
+      clearjQueryCache();
+      window.location.replace('http://localhost/index.html');
     }
   );
 
