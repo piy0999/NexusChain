@@ -114,7 +114,7 @@ d3.json('crunchbase.json', function(error, graph) {
   var lables = node
     .append('text')
     .text(function(d) {
-      return d.id;
+      return d.name;
     })
     .attr('x', 6)
     .attr('y', 3);
