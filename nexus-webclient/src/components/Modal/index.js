@@ -1,11 +1,11 @@
-import React, { Component }   from 'react'
-import PropTypes              from 'prop-types'
-import { connect }            from 'react-redux'
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import { Dialog }             from '@material-ui/core'
+import { Dialog } from '@material-ui/core'
 
 /* actions */
-import * as uiActionCreators  from 'core/actions/actions-ui'
+import * as uiActionCreators from 'core/actions/actions-ui'
 
 /* component styles */
 import { styles } from './styles.scss'
@@ -21,16 +21,24 @@ class Modal extends Component {
   componentWillReceiveProps(nextProps) {
     const modalInstance = nextProps.modalState
 
-    if (modalInstance && (modalInstance.modalKey === this.props.modalKey)) {
+    if (modalInstance && modalInstance.modalKey === this.props.modalKey) {
       this.setState({
         open: modalInstance.showModal
       })
     }
   }
 
+  handleClose = () => {
+    const { actions, modalKey } = this.props
+    this.setState({ open: false })
+    actions.ui.closeModal({ modalKey })
+  }
+
   render() {
-    const { title, children, className, cssModule } = this.props
-    const mergedStyles = styles + ' ' + cssModule
+    const {
+      title, children, className, cssModule
+    } = this.props
+    const mergedStyles = `${styles} ${cssModule}`
 
     return (
       <div>
@@ -40,17 +48,11 @@ class Modal extends Component {
           modal={false}
           open={this.state.open}
           children={<div className={mergedStyles}>{children}</div>}
-          onRequestClose={this.handleClose} />
+          onRequestClose={this.handleClose}
+        />
       </div>
     )
   }
-
-  handleClose=() => {
-    const { actions, modalKey } = this.props
-    this.setState({ open: false })
-    actions.ui.closeModal({modalKey})
-  }
-
 }
 
 Modal.propTypes = {

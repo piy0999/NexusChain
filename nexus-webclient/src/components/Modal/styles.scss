@@ -1,4 +1,13 @@
 :local(.styles) {
-
-
+  .root {
+    flexgrow: 1;
+  }
+  ,
+  .flex {
+    flex: 1;
+  }
+  .menubutton: {
+    marginleft: -12;
+    marginright: 20;
+  }
 }
