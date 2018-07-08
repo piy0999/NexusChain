@@ -79,7 +79,7 @@ def get_graph():
         path = []
     required_entities = get_entities(path)
     graph = get_graph_from_entities(required_entities)
-    with open('crunchbase.json', 'w') as outfile:
+    with open('nexusgraph.json', 'w') as outfile:
         json.dump(graph, outfile)
     return jsonify(graph)
 
